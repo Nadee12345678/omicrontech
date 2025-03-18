@@ -1,0 +1,47 @@
+<style>
+    /* Navigation Bar */
+    .nav-bar {
+        background-color: black;
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    /* Navigation Links */
+    .tab-link {
+        position: relative;
+        font-weight: bold;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+
+    /* Popup Effect */
+    .tab-link:hover {
+        transform: scale(1.1);
+    }
+
+    .tab-link:hover::after {
+        content: attr(data-popup);
+        position: absolute;
+        left: 50%;
+        bottom: -30px;
+        transform: translateX(-50%);
+        background-color: white;
+        color: black;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: bold;
+        white-space: nowrap;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<nav class="nav-bar">
+    <a href="team.html" class="tab-link" data-popup="Meet Our Team">Our Team</a>
+    <a href="product.html" class="tab-link" data-popup="View Our Product">Our Product</a>
+    <a href="plans.html" class="tab-link" data-popup="See Our Future Plans">Future Plans</a>
+</nav>
